@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <SCRIPT src="first.js"></SCRIPT>
     <style>
-        body{
-            background:linear-gradient(rgb(14, 6, 43),rgb(236, 62, 178));
-            min-height:100vh;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        nav{
+            width:100%;
+            padding:1rem 5%;
+            background:rgb(255,255,255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            margin-bottom: 2rem;
+
             display:flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            font-size:1.8rem;
+            font-weight: 700;
+            color:#3ebff7;
+            letter-spacing:1px;
+        }
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap:2rem;
+        }
+        .nav-links li a{
+        position: relative;
+        font-size:1.05rem;
+        font-weight:500;
+        text-decoration: none;
+        color:aliceblue;
+        }
+        .nav-links li a:hover{
+            color:#20b3f1;
+            text-shadow: 0 0 10px #38bf;
+            transition: 0.3s;
+        }
+
+          .login h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:1.5rem;
+            MARGIN-BOTTOM:10PX;
+            text-align: center;
+            color:aliceblue; 
+          } 
+        body{
+            background:rgb(11, 11, 65);
+            min-height:100vh;
+           display: flex;
+            flex-direction: column;
             align-items: center;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .login{
-  border:3px solid;
-  width:250px;
-  height:260px;
-  padding:50px;
-  background:linear-gradient(rgb(66, 6, 90),rgb(216, 231, 236));
+  border:none;
+  width:300px;
+  height:310px;
+  padding:35px 25PX;
+  transform:translateY(50px);
+
+  margin-top:60px;
+background:rgba(255, 255, 255, 0.04);         
   font-weight: bold;
-  border-radius: 34px;
-  box-shadow: 0 10px 40px rgba(165, 209, 45, 0.651);
+  border-radius:40px;
+  backdrop-filter: blur(15px);
+box-shadow: 0 0 25px #20b3f1;
   animation: fadein 0.3s ease-out;
         }
         @keyframes fadein{
@@ -33,32 +86,35 @@
         }
         .login input{
             border:none;
-            border-radius: 8px;
+            border-radius:8px;
             padding:10px 14px;
-            width:100%;
+            width:85%;
+            
+            margin-left:15px;
             margin-top: 9px;
             margin-right:20px;
             margin-bottom:5px;
-            background:rgb(209, 209, 203);
+            background:rgb(255, 255, 239);
             font-size:0.8rem;
             color:rgb(0, 0, 0);
-            font-weight: 100;
+            font-weight: 600;
 
         }
         .login button{
+            position:relative;
+            padding:0.5rem 1.5rem;
             justify-content: center;
             border-radius:10px;
             cursor: pointer;
-            width: 100%;
-            padding:10px;
-            margin-top:9px;
-            margin-right: 5px;
+            margin-left:19px;
+            margin-top:20px;
+            margin-right: 12px;
             margin-bottom:17px;
-            background:rgb(61, 107, 160);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:#3ebff7;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: 700;
             color:black;
-            text-shadow: 0 0 10px 20px rgb(37, 7, 148);
+            text-shadow: 0 0 10px 20px #20b3f1;
             animation:fadein 0.4s ease-in;
 
         }
@@ -73,13 +129,7 @@
                 transform: 20;
             }
         }
-        .login h2{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size:1.5rem;
-            text-align: center;
-            color:aliceblue;
-
-                }
+            
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,10 +137,20 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <div class="logo ">HECKTON</div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PORTAL</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+    </div>
     <div class="login">
         <h2>LOGIN HERE</h2>
     <input type="text" placeholder="ENTER YOUR NAME">
-    <input type="text" placeholder="ENTER YOUR GMAIL">
+    <input type="text" placeholder="ENTER YOUR EMAIL">
     <input type="password" placeholder="ENTER YOUR PASSWORD">
     <button>CONFIRM HERE!</button>
     </div>
